@@ -2,7 +2,7 @@ import React from 'react'
 
 function Button({onClick, children}) {
   return (
-    <button className=' border-1 me-2 mb-5' onClick={onClick}>{children}</button>
+    <button className=' border-danger-subtle me-2 mb-5 rounded-2' onClick={onClick}>{children}</button>
 
   )
 }
