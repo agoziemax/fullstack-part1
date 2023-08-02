@@ -81,6 +81,7 @@ const App = () => {
       setSelected(getRandomItemFromArray(antecedotes));
     }
 
+    // fucntion to handle when the vote button is clicked
     const handleVote = () => {
       const index = antecedotes.indexOf(selected);
 
