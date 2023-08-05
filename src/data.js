@@ -16,6 +16,11 @@ const notes = [
     content: 'GET and POST are the most important methods of HTTP protocol',
     important: true,
   },
+  {
+    id: 4,
+    content: 'GET and POST are the most important',
+    important: true,
+  },
 ];
 
 export default notes
