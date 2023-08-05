@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import Display from './Display';
 import Button from './Button';
 import Statistics from './Statistics';
+import notes from './data';
+
 
 const App = () => {
   // const [left, setLeft] = useState(0);
@@ -85,6 +87,7 @@ const App = () => {
     const handleVote = () => {
       const index = antecedotes.indexOf(selected);
 
+
       if (index !== -1) {
         const updatedCounts = [...voteCounts];
 
@@ -102,6 +105,11 @@ const App = () => {
       return array[randomIndex];
     }
 
+    // notes array section
+
+    const renderedNotes = notes.map((note) => <li key={note.id}>{note.id}</li>);
+    console.log(renderedNotes);
+console.log('App works');
   return (
     <div className='p-4'>
       {/* <Header course={course} />
@@ -118,7 +126,6 @@ const App = () => {
       {right}
       <p>{allClicks.join(' , ')}</p>
       <p>total {total}</p> */}
-
       <Header course='Feedback Portal' />
       <div className=''>
         <Button children='good' onClick={handleGood}></Button>
@@ -144,6 +151,10 @@ const App = () => {
 
         <Button onClick={handleShow}>next antecedote</Button>
       </div>
+      <hr />
+      <ul>
+        {renderedNotes}
+      </ul>
     </div>
   );
 };
